@@ -5,7 +5,7 @@ let numeroAzar = Math.floor(Math.random()*100) + 1
 let numeroEntrada = document.getElementById('numeroEntrada')
 let mensaje = document.getElementById('mensaje')
 
-
+//Funcion para el boton
 function chequearResultado(){
     let numeroIngresado = parseInt(numeroEntrada.value)
 
@@ -19,10 +19,10 @@ function chequearResultado(){
         mensaje.style.color ='green';
         numeroEntrada.disable = true;
     }else if (numeroIngresado < numeroAzar) {
-        mensaje.textContent = '¡Mas alto! El numero es mas alto que seleccionaste!';
+        mensaje.textContent = '¡Mas alto! El numero es mas alto que seleccionaste!. Intenta de nuevo';
         mensaje.style.color = 'red';
     }else {
-        mensaje.textContent= 'El numero es mas bajo que el que seleccionaste';
+        mensaje.textContent= 'El numero es mas bajo que el que seleccionaste. Intenta de nuevo';
         mensaje.style.color = 'red';
     }
 
